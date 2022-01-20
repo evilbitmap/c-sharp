@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Linq;
 using System.Threading;
 
@@ -6,6 +6,8 @@ namespace tictactoe
 {
     class Program
     {
+        static int hracO_points;
+        static int hracX_points;
         //pozice
         static char[] Pozice = { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
         //kdo hraje
@@ -18,14 +20,23 @@ namespace tictactoe
         //printe hrací plochu
         static void Board()
         {
-            Console.WriteLine(" {0} | {1} | {2}", Pozice[6], Pozice[7], Pozice[8]);
-            Console.WriteLine("---+---+---");
-            Console.WriteLine(" {0} | {1} | {2}", Pozice[3], Pozice[4], Pozice[5]);
-            Console.WriteLine("---+---+---");
-            Console.WriteLine(" {0} | {1} | {2}", Pozice[0], Pozice[1], Pozice[2]);
+            Console.WriteLine("");
+            Console.WriteLine(" +-----------+");
+            Console.WriteLine(" | Points:   |");
+            Console.WriteLine(" | O:{0} ; X:{1} |", hracO_points, hracX_points);
+            Console.WriteLine(" +-----------+");
+            Console.WriteLine("");
             Console.WriteLine("{0}", text);
+            Console.WriteLine("");
+            Console.WriteLine(" +-----+-----+");
+            Console.WriteLine(" | {0} | {1} | {2} |", Pozice[6], Pozice[7], Pozice[8]);
+            Console.WriteLine(" |---+---+---|");
+            Console.WriteLine(" | {0} | {1} | {2} |", Pozice[3], Pozice[4], Pozice[5]);
+            Console.WriteLine(" |---+---+---|");
+            Console.WriteLine(" | {0} | {1} | {2} |", Pozice[0], Pozice[1], Pozice[2]);
+            Console.WriteLine(" +-----+-----+");
+            Console.WriteLine("");
             Console.WriteLine("Player's turn: {0}", Player);
-            
         }
         static void hra()
         {
@@ -52,31 +63,76 @@ namespace tictactoe
                 }
 
                 //zkontroluj výhru
-                ZkontrolujVyherce();
-                if(ZkontrolujVyherce() == true)
-                {
-                    Console.Clear();
-                    Board();
-                    Console.WriteLine("Player {0} won!", Player);
-                    Thread.Sleep(1000);
-                    break;
-                }
-
+                Pravidla();
+                Zkontrolujvyherce();
 
                 //vyměn hráče
+                Changeplayer();
+            }
+        }
+        public static void PlayAgain()
+        {
+            Console.Clear();
+            Board();
+            Console.WriteLine("Play again? (y/n)");
+            string input = Console.ReadLine();
+            if (input == "n")
+            {
+                Environment.Exit(0);
+            }
+
+
+        }
+        public static void Zkontrolujvyherce()
+        {
+            if (Pravidla() == true)
+            {
+                Console.Clear();
                 if (Player == 'O')
                 {
-                    Player = 'X';
+                    text = "Player O won! (+1)";
+                    hracO_points += 1;
                 }
                 else
                 {
-                    Player = 'O';
+                    text = "Player X won! (+1)";
+                    hracX_points += 1;
                 }
+                Board();
+                Thread.Sleep(1000);
+                PlayAgain();
+                resetHraciPole();
             }
         }
 
+        public static void Changeplayer()
+        {
+            if (Player == 'O')
+            {
+                Player = 'X';
+            }
+            else
+            {
+                Player = 'O';
+            }
+        }
+
+        public static void resetHraciPole()
+        {
+            Pozice[0] = ' ';
+            Pozice[1] = ' ';
+            Pozice[2] = ' ';
+            Pozice[3] = ' ';
+            Pozice[4] = ' ';
+            Pozice[5] = ' ';
+            Pozice[6] = ' ';
+            Pozice[7] = ' ';
+            Pozice[8] = ' ';
+        }
+
+
         //kopírováno, upraveno
-        public static bool ZkontrolujVyherce()
+        public static bool Pravidla()
         {
             // check rows
             if (Pozice[0] == 'O' && Pozice[1] == 'O' && Pozice[2] == 'O') { return true; }
