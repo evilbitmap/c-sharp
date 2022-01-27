@@ -9,7 +9,6 @@
         
         static int RandomInteger(int min, int max)
         {
-            //http://csharphelper.com/blog/2014/08/use-a-cryptographic-random-number-generator-in-c/
             //unit scale = unit.maxvalue = 4,294,967,295
             //pokud scale = unit.maxvalue tak...
             //rng.getbytes(4)
