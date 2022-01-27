@@ -6,31 +6,32 @@ namespace ZnamkyKal
 {
     class Program
     {
+        //https://www.codeproject.com/Questions/746944/How-to-create-number-of-lists-at-runtime-in-Csharp
+
         static string line1;
         static string line2;
         static string line3;
         static bool fastbool = true;
-        static List<int> grades = new List<int>() {};
+        static Dictionary<string, List<int>> ListGrades = new Dictionary<string, List<int>>();
         static List<string> subjects = new List<string>();
 
-
-        static void AddPole()
+        static void CreateList()
         {
-            for(int i = 0; i < grades.Count; i++)
+            for (int i = 0; i < subjects.Count; i++)
             {
-                if (fastbool)
-                {
-                    line1 += "+---+";
-                    line2 += "| " + grades[i] + " |";
-                    line3 += "+---+";
-                    fastbool = false;
-                }
-                else
-                {
-                   line1 += "---+";
-                   line2 += " " + grades[i] + " |";
-                   line3 += "---+";
-                }
+                ListGrades.Add("Grades" + i.ToString(), new List<int>());
+            }
+        }
+        static void AddPole(string subject)
+        {
+            line1 = "";
+            line2 = "";
+            line3 = "";
+            for (int i = 0; i < ListGrades.Count; i++)
+            {
+                line1 += "+---+";
+                line2 += "| " + ListGrades[i] + " |";
+                line3 += "+---+";
             }
             Console.WriteLine(line1);
             Console.WriteLine(line2);
@@ -118,14 +119,23 @@ namespace ZnamkyKal
         }
         static void AddGrade()
         {
+            Console.Clear();
             Console.WriteLine("Choose a subject");
-            foreach(string item in subjects)
+            for(int i = 0; i < subjects.Count; i++)
             {
-                Console.WriteLine(item);
+                Console.WriteLine(i + " : " + subjects[i]);
             }
+            int input3 = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+            Console.WriteLine("Enter grade...");
+            int input4 = Convert.ToInt32(Console.ReadLine());
+            grades.Add(input4);
+            ShowGrades();
+
         }
         static void AddSubject()
         {
+            Console.Clear();
             Console.WriteLine("Enter name for subject");
             string input = Console.ReadLine();
             subjects.Add(input);
