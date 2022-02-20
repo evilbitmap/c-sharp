@@ -1,0 +1,10 @@
+C:\Users\matta\source\repos\PingBar\PingBar\bin\Debug\PingBar.exe.config
+C:\Users\matta\source\repos\PingBar\PingBar\bin\Debug\PingBar.exe
+C:\Users\matta\source\repos\PingBar\PingBar\bin\Debug\PingBar.pdb
+C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.csproj.AssemblyReference.cache
+C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.Form1.resources
+C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.Properties.Resources.resources
+C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.csproj.GenerateResource.cache
+C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.csproj.CoreCompileInputs.cache
+C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.exe
+C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.pdb
