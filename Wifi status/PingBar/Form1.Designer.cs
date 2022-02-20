@@ -70,7 +70,8 @@ namespace PingBar
             // 
             // timerStopper
             // 
-            this.timerStopper.Interval = 1000;
+            this.timerStopper.Interval = 40;
+            this.timerStopper.Tick += new System.EventHandler(this.timerStopper_Tick);
             // 
             // groupBox1
             // 
