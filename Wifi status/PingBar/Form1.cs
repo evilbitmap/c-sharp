@@ -31,9 +31,11 @@ namespace PingBar
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            Keyboard.IsKeyToggled(Keys.Home);
+
+
             timerCheckWifiStatus.Start();
             timerStopper.Start();
-            timerIsFocused.Start();
         }
 
         static bool CheckIfConnected()
@@ -74,8 +76,7 @@ namespace PingBar
         public abstract class Keyboard
         {
             [Flags]
-            private enum KeyStates
-            {
+            private enum KeyStates {
                 None = 0,
                 Down = 1,
                 Toggled = 2
@@ -110,14 +111,33 @@ namespace PingBar
             }
         }
 
+        static int value = 0;
+
         private void timerStopper_Tick(object sender, EventArgs e)
         {
-            if(Keyboard.IsKeyToggled(Keys.Home) == true) {
+            if(Keyboard.IsKeyToggled(Keys.Home)) {
                 this.Opacity = 0;
                 timerCheckWifiStatus.Stop();
+                timerCheckBeforeClosing.Start();
+
             } else {
-                timerCheckWifiStatus.Start();
                 this.Opacity = 100;
+                timerCheckWifiStatus.Start();
+                timerCheckBeforeClosing.Stop();
+                value = 0;
+            }
+        }
+
+        private void timerCheckBeforeClosing_Tick(object sender, EventArgs e)
+        {
+            if(value == 1)
+            {
+                this.Close();
+            }
+
+            if (Keyboard.IsKeyDown(Keys.Home))
+            {
+                value++;
             }
         }
     }

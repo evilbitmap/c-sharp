@@ -35,7 +35,7 @@ namespace PingBar
             this.labelPingStatus = new System.Windows.Forms.Label();
             this.timerStopper = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.timerIsFocused = new System.Windows.Forms.Timer(this.components);
+            this.timerCheckBeforeClosing = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,9 +86,10 @@ namespace PingBar
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // timerIsFocused
+            // timerCheckBeforeClosing
             // 
-            this.timerIsFocused.Interval = 1;
+            this.timerCheckBeforeClosing.Interval = 1000;
+            this.timerCheckBeforeClosing.Tick += new System.EventHandler(this.timerCheckBeforeClosing_Tick);
             // 
             // Form1
             // 
@@ -119,7 +120,7 @@ namespace PingBar
         private System.Windows.Forms.Label labelPingStatus;
         private System.Windows.Forms.Timer timerStopper;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Timer timerIsFocused;
+        private System.Windows.Forms.Timer timerCheckBeforeClosing;
     }
 }
 
