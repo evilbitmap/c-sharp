@@ -1,5 +1,4 @@
 # wifi status
 Shows if you are connected to the internet and what ping latency you are receiving
 # Hide/close program
-with "HOME" button you can hide the program and pause pings and
-"END" closes the program
+with short "HOME" button press the program will hide, hold "HOME" button for 2 seconds and it will close.
