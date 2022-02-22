@@ -32,7 +32,7 @@ namespace PingBar
             this.TransparencyKey = Color.Magenta;
 
             Rectangle res = Screen.PrimaryScreen.Bounds;
-            this.Location = new Point(res.Width - Size.Width, res.Height - Size.Height - 25);
+            this.Location = new Point(res.Width - Size.Width, res.Height - Size.Height - 50);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -57,7 +57,7 @@ namespace PingBar
         static int GetPing()
         {
             Ping ping = new Ping();
-            PingReply reply = ping.Send("216.58.201.78", 1000);
+            PingReply reply = ping.Send("google.com", 1000);
             if (reply != null)
             {
                 return Convert.ToInt32(reply.RoundtripTime);

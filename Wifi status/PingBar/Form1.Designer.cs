@@ -34,8 +34,8 @@ namespace PingBar
             this.timerCheckWifiStatus = new System.Windows.Forms.Timer(this.components);
             this.labelPingStatus = new System.Windows.Forms.Label();
             this.timerCheckForInput = new System.Windows.Forms.Timer(this.components);
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.timerCheckClosing = new System.Windows.Forms.Timer(this.components);
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,30 +68,27 @@ namespace PingBar
             this.labelPingStatus.TabIndex = 1;
             this.labelPingStatus.Text = "Ping: ...";
             // 
-            // groupBox1
-            // 
-            this.groupBox1.BackColor = System.Drawing.Color.Transparent;
-            this.groupBox1.Controls.Add(this.labelWifiStatus);
-            this.groupBox1.Controls.Add(this.labelPingStatus);
-            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.groupBox1.ForeColor = System.Drawing.Color.Black;
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(100, 58);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            // 
             // timerCheckClosing
             // 
             this.timerCheckClosing.Interval = 40;
             this.timerCheckClosing.Tick += new System.EventHandler(this.timerCheckClosing_Tick);
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.labelWifiStatus);
+            this.groupBox1.Controls.Add(this.labelPingStatus);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(100, 60);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(134, 90);
+            this.ClientSize = new System.Drawing.Size(125, 85);
             this.Controls.Add(this.groupBox1);
             this.ForeColor = System.Drawing.Color.Black;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -114,8 +111,8 @@ namespace PingBar
         private System.Windows.Forms.Timer timerCheckWifiStatus;
         private System.Windows.Forms.Label labelPingStatus;
         private System.Windows.Forms.Timer timerCheckForInput;
-        private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Timer timerCheckClosing;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
 
