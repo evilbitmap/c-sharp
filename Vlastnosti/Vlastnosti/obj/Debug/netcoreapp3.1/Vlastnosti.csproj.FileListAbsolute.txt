@@ -1,0 +1,13 @@
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\bin\Debug\netcoreapp3.1\Vlastnosti.exe
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\bin\Debug\netcoreapp3.1\Vlastnosti.deps.json
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\bin\Debug\netcoreapp3.1\Vlastnosti.runtimeconfig.json
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\bin\Debug\netcoreapp3.1\Vlastnosti.runtimeconfig.dev.json
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\bin\Debug\netcoreapp3.1\Vlastnosti.dll
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\bin\Debug\netcoreapp3.1\Vlastnosti.pdb
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\obj\Debug\netcoreapp3.1\Vlastnosti.csproj.AssemblyReference.cache
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\obj\Debug\netcoreapp3.1\Vlastnosti.AssemblyInfoInputs.cache
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\obj\Debug\netcoreapp3.1\Vlastnosti.AssemblyInfo.cs
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\obj\Debug\netcoreapp3.1\Vlastnosti.csproj.CoreCompileInputs.cache
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\obj\Debug\netcoreapp3.1\Vlastnosti.dll
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\obj\Debug\netcoreapp3.1\Vlastnosti.pdb
+C:\Users\matta\source\repos\Vlastnosti\Vlastnosti\obj\Debug\netcoreapp3.1\Vlastnosti.genruntimeconfig.cache
