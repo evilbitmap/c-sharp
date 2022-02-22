@@ -1,0 +1,13 @@
+C:\Users\matta\source\repos\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.exe
+C:\Users\matta\source\repos\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.deps.json
+C:\Users\matta\source\repos\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.runtimeconfig.json
+C:\Users\matta\source\repos\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.runtimeconfig.dev.json
+C:\Users\matta\source\repos\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.dll
+C:\Users\matta\source\repos\Classes\Classes\bin\Debug\netcoreapp3.1\Classes.pdb
+C:\Users\matta\source\repos\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.csproj.AssemblyReference.cache
+C:\Users\matta\source\repos\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.AssemblyInfoInputs.cache
+C:\Users\matta\source\repos\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.AssemblyInfo.cs
+C:\Users\matta\source\repos\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.csproj.CoreCompileInputs.cache
+C:\Users\matta\source\repos\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.dll
+C:\Users\matta\source\repos\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.pdb
+C:\Users\matta\source\repos\Classes\Classes\obj\Debug\netcoreapp3.1\Classes.genruntimeconfig.cache
