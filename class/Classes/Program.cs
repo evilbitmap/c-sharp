@@ -9,7 +9,7 @@ namespace Classes
             StudentClass student = new StudentClass();
             student.Name = "matyas";
             student.Age = 16;
-            student.Phone = "+420 775 626 290";
+            student.Phone = "+420 67455674";
             Console.WriteLine(student.Name);
             Console.WriteLine(student.Age);
             Console.WriteLine(student.Phone);
