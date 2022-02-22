@@ -8,3 +8,4 @@ C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.csproj.GenerateRes
 C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.csproj.CoreCompileInputs.cache
 C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.exe
 C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.pdb
+C:\Users\matta\source\repos\PingBar\PingBar\obj\Debug\PingBar.FormMenu.resources

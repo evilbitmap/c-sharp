@@ -33,9 +33,9 @@ namespace PingBar
             this.labelWifiStatus = new System.Windows.Forms.Label();
             this.timerCheckWifiStatus = new System.Windows.Forms.Timer(this.components);
             this.labelPingStatus = new System.Windows.Forms.Label();
-            this.timerStopper = new System.Windows.Forms.Timer(this.components);
+            this.timerCheckForInput = new System.Windows.Forms.Timer(this.components);
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.timerCheckBeforeClosing = new System.Windows.Forms.Timer(this.components);
+            this.timerCheckClosing = new System.Windows.Forms.Timer(this.components);
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,11 +68,6 @@ namespace PingBar
             this.labelPingStatus.TabIndex = 1;
             this.labelPingStatus.Text = "Ping: ...";
             // 
-            // timerStopper
-            // 
-            this.timerStopper.Interval = 40;
-            this.timerStopper.Tick += new System.EventHandler(this.timerStopper_Tick);
-            // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.Color.Transparent;
@@ -86,10 +81,10 @@ namespace PingBar
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             // 
-            // timerCheckBeforeClosing
+            // timerCheckClosing
             // 
-            this.timerCheckBeforeClosing.Interval = 1000;
-            this.timerCheckBeforeClosing.Tick += new System.EventHandler(this.timerCheckBeforeClosing_Tick);
+            this.timerCheckClosing.Interval = 40;
+            this.timerCheckClosing.Tick += new System.EventHandler(this.timerCheckClosing_Tick);
             // 
             // Form1
             // 
@@ -118,9 +113,9 @@ namespace PingBar
         private System.Windows.Forms.Label labelWifiStatus;
         private System.Windows.Forms.Timer timerCheckWifiStatus;
         private System.Windows.Forms.Label labelPingStatus;
-        private System.Windows.Forms.Timer timerStopper;
+        private System.Windows.Forms.Timer timerCheckForInput;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Timer timerCheckBeforeClosing;
+        private System.Windows.Forms.Timer timerCheckClosing;
     }
 }
 
