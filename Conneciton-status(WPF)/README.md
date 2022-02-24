@@ -1,5 +1,5 @@
 # to fix...
-1) KeyboardHook delegate
+1) KeyboardHook delegate (fixed)
 2) my life lol
 
 # to-do...
