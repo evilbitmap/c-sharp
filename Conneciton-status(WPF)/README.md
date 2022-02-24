@@ -5,10 +5,8 @@
   and not to close the window.
 
 # to-do...
-~~~
- Markup : - [ ] Settings Window
-              - [x] be able to change ping hostname
-              - [ ] be able to pause and resume pinging
-              - [ ] be able to change opacity of the MainWindow background
-              - [ ] design it lil
-~~~
+[ ] Settings Window
+  - [x] be able to change ping hostname
+  - [ ] be able to pause and resume pinging
+  - [ ] be able to change opacity of the MainWindow background
+  - [ ] design it lil
