@@ -1,8 +1,8 @@
 # to fix...
-1) KeyboardHook delegate garbage collecting (fixed)
-2) Cannot re-show SettingsWindow when closed
-  Solution: change borderstyle to none and make it moveble with custom "x" button to HIDE
-  and not to close the window.
+- [x] KeyboardHook delegate garbage collecting (fixed)
+- [ ] Cannot re-show SettingsWindow when closed
+      Solution: change borderstyle to none and make it moveble with custom "x" button to HIDE
+      and not to close the window.
 
 ## to-do... ##
 - [ ] SettingsWindow
