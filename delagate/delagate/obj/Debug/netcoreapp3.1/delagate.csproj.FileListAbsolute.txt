@@ -1,0 +1,13 @@
+C:\Users\matta\source\repos\delagate\delagate\bin\Debug\netcoreapp3.1\delagate.exe
+C:\Users\matta\source\repos\delagate\delagate\bin\Debug\netcoreapp3.1\delagate.deps.json
+C:\Users\matta\source\repos\delagate\delagate\bin\Debug\netcoreapp3.1\delagate.runtimeconfig.json
+C:\Users\matta\source\repos\delagate\delagate\bin\Debug\netcoreapp3.1\delagate.runtimeconfig.dev.json
+C:\Users\matta\source\repos\delagate\delagate\bin\Debug\netcoreapp3.1\delagate.dll
+C:\Users\matta\source\repos\delagate\delagate\bin\Debug\netcoreapp3.1\delagate.pdb
+C:\Users\matta\source\repos\delagate\delagate\obj\Debug\netcoreapp3.1\delagate.csproj.AssemblyReference.cache
+C:\Users\matta\source\repos\delagate\delagate\obj\Debug\netcoreapp3.1\delagate.AssemblyInfoInputs.cache
+C:\Users\matta\source\repos\delagate\delagate\obj\Debug\netcoreapp3.1\delagate.AssemblyInfo.cs
+C:\Users\matta\source\repos\delagate\delagate\obj\Debug\netcoreapp3.1\delagate.csproj.CoreCompileInputs.cache
+C:\Users\matta\source\repos\delagate\delagate\obj\Debug\netcoreapp3.1\delagate.dll
+C:\Users\matta\source\repos\delagate\delagate\obj\Debug\netcoreapp3.1\delagate.pdb
+C:\Users\matta\source\repos\delagate\delagate\obj\Debug\netcoreapp3.1\delagate.genruntimeconfig.cache
