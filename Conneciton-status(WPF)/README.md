@@ -4,7 +4,7 @@
   Solution: change borderstyle to none and make it moveble with custom "x" button to HIDE
   and not to close the window.
 
-# to-do...
+# to-do... #
 [ ] Settings Window
   - [x] be able to change ping hostname
   - [ ] be able to pause and resume pinging
