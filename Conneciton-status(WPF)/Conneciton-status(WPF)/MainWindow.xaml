@@ -27,7 +27,6 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <TextBlock Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Padding="5" FontSize="13" FontFamily="Arial" Foreground="Red" Name="TextBlockConnection" FontWeight="Bold">DISCONNECTED</TextBlock>
-        <TextBlock Grid.Column="0" Grid.ColumnSpan="3" Padding="30" VerticalAlignment="Center" FontSize="15" FontFamily="Arial" Height="51" Margin="0,-1,0,0" Grid.RowSpan="3" Foreground="White">Ping:</TextBlock>
-        <TextBlock Grid.Column="1" Grid.ColumnSpan="2" Padding="30" VerticalAlignment="Center" FontSize="15" FontFamily="Arial" Height="51" Margin="0,-1,0,0" Grid.RowSpan="3" x:Name="TextBlockPing" Foreground="White"><Run Text="..."/></TextBlock>
+        <TextBlock Grid.Column="0" Grid.Row="01" Grid.ColumnSpan="3" Grid.RowSpan="1" HorizontalAlignment="Center" Padding="0" FontSize="15" FontFamily="Arial" Height="50" Foreground="White" Name="TextBlockPing">Ping: ...</TextBlock>
     </Grid>
 </Window>

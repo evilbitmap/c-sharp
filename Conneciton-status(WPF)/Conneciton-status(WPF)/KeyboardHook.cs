@@ -26,6 +26,8 @@ namespace Conneciton_status_WPF_
 
         private delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
 
+        private static LowLevelKeyboardProc callbackDelegate;
+
         const int WH_KEYBOARD_LL = 13;
         const int WM_KEYDOWN = 0x100;
 
@@ -35,8 +37,10 @@ namespace Conneciton_status_WPF_
 
         public void SetHook()
         {
+            //fixed
             IntPtr hInstance = LoadLibrary("User32");
-            hhook = SetWindowsHookEx(WH_KEYBOARD_LL, _proc, hInstance, 0);
+            callbackDelegate = new LowLevelKeyboardProc(HookProc);
+            hhook = SetWindowsHookEx(WH_KEYBOARD_LL, callbackDelegate, hInstance, 0);
         }
 
         public static void UnHook()

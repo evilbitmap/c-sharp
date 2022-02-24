@@ -29,6 +29,7 @@ namespace Conneciton_status_WPF_
         {
             TimerClass timers = new TimerClass();
             KeyboardHook hook = new KeyboardHook();
+            GetPing ping = new GetPing();
 
             this.Topmost = true;
             var desktopWorkingArea = System.Windows.SystemParameters.WorkArea;
@@ -39,6 +40,8 @@ namespace Conneciton_status_WPF_
             hook.SetHook();
             SetTimerPing();
             SetTimerIsConnected();
+            ping.SetWorkerPing();
+            
         }
 
         // PING PONG
@@ -54,7 +57,14 @@ namespace Conneciton_status_WPF_
         {
             this.Dispatcher.Invoke(() =>
             {
-                TextBlockPing.Text = GetPing.Ping().ToString();
+                if (GetPing.PingLatency != 0)
+                {
+                    TextBlockPing.Text = "Ping: " + GetPing.PingLatency;
+                }
+                else
+                {
+                    TextBlockPing.Text = "Ping: ERROR";
+                }
             });
         }
         // END

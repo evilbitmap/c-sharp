@@ -25,12 +25,12 @@ namespace Conneciton_status_WPF_
         }
         private void SettingsWindow_Loaded(object sender, EventArgs e)
         {
-            KeyboardHook.UnHook();
+
         }
 
         private void ButtonSave_Click(object sender, EventArgs e)
         {
-
+            Properties.Settings.Default.PingHost = TextBoxPingHost.Text;
         }
         private void ButtonClose_Click(object sender, EventArgs e)
         {

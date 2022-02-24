@@ -22,5 +22,17 @@ namespace Conneciton_status_WPF_.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string PingHost {
+            get {
+                return ((string)(this["PingHost"]));
+            }
+            set {
+                this["PingHost"] = value;
+            }
+        }
     }
 }

@@ -9,11 +9,24 @@
         Loaded="SettingsWindow_Loaded"
         ResizeMode="NoResize">
     <Grid>
-        <GroupBox Header="Ping" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="222"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="60,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Name="TextBoxPingHost"/>
-        <Button Content="save" HorizontalAlignment="Left" Margin="259,396,0,0" VerticalAlignment="Top" Width="75" Name="ButtonSave" Click="ButtonSave_Click"/>
-        <GroupBox Header="idk smtn else" HorizontalAlignment="Left" Height="100" Margin="243,10,0,0" VerticalAlignment="Top" Width="222"/>
-        <Button Content="close" HorizontalAlignment="Left" Margin="348,396,0,0" VerticalAlignment="Top" Width="75" Name="ButtonClose" Click="ButtonClose_Click"/>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <GroupBox Header="Ping" Height="147" VerticalAlignment="Top" Width="227" Grid.Row="0" Grid.Column="0" HorizontalAlignment="Center">
+            <TextBox Height="23" Margin="44,46,51,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Name="TextBoxPingHost"/>
+        </GroupBox>
+        <GroupBox Header="GroupBox" Height="147" VerticalAlignment="Top" Width="227" Grid.Row="0" Grid.Column="1" HorizontalAlignment="Center"/>
+        <GroupBox Header="GroupBox" Height="147" VerticalAlignment="Top" Width="227" Grid.Row="1" Grid.Column="0" HorizontalAlignment="Center"/>
+        <GroupBox Header="GroupBox" Height="147" VerticalAlignment="Top" Width="227" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center"/>
+        <Button Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Height="25" Width="75" Margin="162,122,10,10" Name="ButtonClose" Click="ButtonClose_Click">Close</Button>
+        <Button Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Height="25" Width="75" Margin="82,122,90,10" Name="ButtonSave" Click="ButtonSave_Click">Save</Button>
+
 
     </Grid>
 </Window>
