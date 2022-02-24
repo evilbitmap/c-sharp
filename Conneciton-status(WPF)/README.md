@@ -5,9 +5,7 @@
   and not to close the window.
 
 # to-do...
-1) SettingsWinodw
-  1) be able to change ping hostname (done)
-  2) be able to pause and resume pinging
-  3) be able to change opacity of the MainWindow background
-  4) idk
-2) kill myself (lole) 
+ Markup : - [ ] Settings Window
+              - [x] be able to change ping hostname (done)
+              - [ ] be able to pause and resume pinging
+              - [ ] be able to change opacity of the MainWindow background
