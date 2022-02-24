@@ -1,0 +1,19 @@
+﻿<Window x:Class="Conneciton_status_WPF_.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Conneciton_status_WPF_"
+        mc:Ignorable="d"
+        Title="Settings" Height="500" Width="500"
+        Loaded="SettingsWindow_Loaded"
+        ResizeMode="NoResize">
+    <Grid>
+        <GroupBox Header="Ping" HorizontalAlignment="Left" Height="100" Margin="10,10,0,0" VerticalAlignment="Top" Width="222"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="60,50,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Name="TextBoxPingHost"/>
+        <Button Content="save" HorizontalAlignment="Left" Margin="259,396,0,0" VerticalAlignment="Top" Width="75" Name="ButtonSave" Click="ButtonSave_Click"/>
+        <GroupBox Header="idk smtn else" HorizontalAlignment="Left" Height="100" Margin="243,10,0,0" VerticalAlignment="Top" Width="222"/>
+        <Button Content="close" HorizontalAlignment="Left" Margin="348,396,0,0" VerticalAlignment="Top" Width="75" Name="ButtonClose" Click="ButtonClose_Click"/>
+
+    </Grid>
+</Window>
