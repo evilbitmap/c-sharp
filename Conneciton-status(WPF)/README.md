@@ -15,7 +15,7 @@
   - [x] be able to change opacity of the MainWindow background
   - [x] be able to change the postion of the window
   - [ ] design it lil
-- [ ] Left SHIFT + F8 = close program
+- [x] Left SHIFT + F8 = close program
 
 # How to use
 This small program I made shows you if you are connected to the internet and what
