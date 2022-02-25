@@ -13,7 +13,7 @@
         Name="StatusWindow">
 
     <Window.Background>
-        <SolidColorBrush Opacity="0.75" Color="Black"/>
+        <SolidColorBrush  Color="Black"/>
     </Window.Background>
     <Grid>
         <Grid.RowDefinitions>

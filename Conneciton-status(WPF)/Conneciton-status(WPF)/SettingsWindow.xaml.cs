@@ -31,6 +31,11 @@ namespace Conneciton_status_WPF_
                 TextBoxInterval.Text = Convert.ToString(Properties.Settings.Default.PingInterval);
             });
         }
+        private void SliderWindowOpacity_Changed(object sender, RoutedEventArgs e)
+        {
+            double value = SliderWindowOpacity.Value / 100;
+            App.Current.MainWindow.Background.Opacity = value;
+        }
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.PingHost = TextBoxPingHost.Text;

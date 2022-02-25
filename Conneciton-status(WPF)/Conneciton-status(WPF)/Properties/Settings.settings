@@ -8,5 +8,8 @@
     <Setting Name="PingHost" Type="System.String" Scope="User">
       <Value Profile="(Default)">google.com</Value>
     </Setting>
+    <Setting Name="WindowOpacity" Type="System.Decimal" Scope="User">
+      <Value Profile="(Default)">0.5</Value>
+    </Setting>
   </Settings>
 </SettingsFile>

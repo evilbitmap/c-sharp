@@ -46,5 +46,17 @@ namespace Conneciton_status_WPF_.Properties {
                 this["PingHost"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.5")]
+        public decimal WindowOpacity {
+            get {
+                return ((decimal)(this["WindowOpacity"]));
+            }
+            set {
+                this["WindowOpacity"] = value;
+            }
+        }
     }
 }

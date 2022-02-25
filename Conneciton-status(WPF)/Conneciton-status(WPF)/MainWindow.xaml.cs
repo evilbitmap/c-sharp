@@ -36,6 +36,7 @@ namespace Conneciton_status_WPF_
             var desktopWorkingArea = System.Windows.SystemParameters.WorkArea;
             this.Left = desktopWorkingArea.Right - this.Width - 10;
             this.Top = desktopWorkingArea.Bottom - this.Height - 10;
+            this.Background.Opacity = 0.5;
 
 
             hook.SetHook();
