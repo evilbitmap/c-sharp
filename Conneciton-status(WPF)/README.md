@@ -25,4 +25,4 @@ By pressing "F8" you can make the status bar to show or hide.
 ## Openning settings
 By pressing "F8" + "Right SHIFT" you can show or hide the settings .
 ## Closing the program
-By pressing "F8" + "Left SHIFT" you can close the program. (WIP, shown above)
+By pressing "F8" + "Left SHIFT" you can close the program.
