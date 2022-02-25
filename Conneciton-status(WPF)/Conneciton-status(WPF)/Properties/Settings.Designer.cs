@@ -25,7 +25,19 @@ namespace Conneciton_status_WPF_.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        [global::System.Configuration.DefaultSettingValueAttribute("500")]
+        public int PingInterval {
+            get {
+                return ((int)(this["PingInterval"]));
+            }
+            set {
+                this["PingInterval"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("google.com")]
         public string PingHost {
             get {
                 return ((string)(this["PingHost"]));

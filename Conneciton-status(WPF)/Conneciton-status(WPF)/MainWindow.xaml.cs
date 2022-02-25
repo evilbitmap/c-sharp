@@ -24,13 +24,14 @@ namespace Conneciton_status_WPF_
         public MainWindow()
         {
             InitializeComponent();
+
         }
+        System.Timers.Timer timerPing = new System.Timers.Timer(Properties.Settings.Default.PingInterval);
         void StatusWindow_Loaded(object sender, RoutedEventArgs e)
         {
             TimerClass timers = new TimerClass();
             KeyboardHook hook = new KeyboardHook();
             GetPing ping = new GetPing();
-
             this.Topmost = true;
             var desktopWorkingArea = System.Windows.SystemParameters.WorkArea;
             this.Left = desktopWorkingArea.Right - this.Width - 10;
@@ -45,21 +46,29 @@ namespace Conneciton_status_WPF_
         }
 
         // PING PONG
-        void SetTimerPing()
+        public void SetTimerPing()
         {
-            System.Timers.Timer timerPing;
-            timerPing = new System.Timers.Timer();
             timerPing.Elapsed += new ElapsedEventHandler(TimerPingElapsed);
-            timerPing.Interval = 1000;
             timerPing.Enabled = true;
         }
+        
         private void TimerPingElapsed(object sender, ElapsedEventArgs e)
         {
+            //zmeni interval
+            timerPing.Interval = Properties.Settings.Default.PingInterval;
+
             this.Dispatcher.Invoke(() =>
             {
                 if (GetPing.PingLatency != 0)
                 {
-                    TextBlockPing.Text = "Ping: " + GetPing.PingLatency;
+                    if(GetPing.IsPaused)
+                    {
+                        TextBlockPing.Text = "Ping: Paused";
+                    }
+                    else
+                    {
+                        TextBlockPing.Text = "Ping: " + GetPing.PingLatency;
+                    }
                 }
                 else
                 {

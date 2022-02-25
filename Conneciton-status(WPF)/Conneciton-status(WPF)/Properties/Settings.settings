@@ -2,8 +2,11 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Conneciton_status_WPF_.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
+    <Setting Name="PingInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">500</Value>
+    </Setting>
     <Setting Name="PingHost" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
+      <Value Profile="(Default)">google.com</Value>
     </Setting>
   </Settings>
 </SettingsFile>

@@ -25,16 +25,29 @@ namespace Conneciton_status_WPF_
         }
         private void SettingsWindow_Loaded(object sender, EventArgs e)
         {
-
+            this.Dispatcher.Invoke(() =>
+            {
+                TextBoxPingHost.Text = Properties.Settings.Default.PingHost;
+                TextBoxInterval.Text = Convert.ToString(Properties.Settings.Default.PingInterval);
+            });
         }
-
-        private void ButtonSave_Click(object sender, EventArgs e)
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
             Properties.Settings.Default.PingHost = TextBoxPingHost.Text;
+            Properties.Settings.Default.PingInterval = Convert.ToInt32(TextBoxInterval.Text);
+            Properties.Settings.Default.Save();
         }
         private void ButtonClose_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+        private void ButtonResumePing_Click(object sender, RoutedEventArgs e)
+        {
+            GetPing.IsPaused = false;
+        }
+        private void ButtonPausePing_Click(object sender, RoutedEventArgs e)
+        {
+            GetPing.IsPaused = true;
         }
     }
 }
