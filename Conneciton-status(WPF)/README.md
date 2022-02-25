@@ -10,5 +10,6 @@
   - [x] be able to pause and resume pinging
   - [x] be able to change interval for ping
       - [ ] Change it instantly
-  - [ ] be able to change opacity of the MainWindow background
+  - [x] be able to change opacity of the MainWindow background
+  - [ ] be able to change the postion of the window
   - [ ] design it lil
