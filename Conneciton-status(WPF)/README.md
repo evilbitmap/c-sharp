@@ -3,7 +3,7 @@
 - [ ] Cannot re-show SettingsWindow when closed
       - Solution: change borderstyle to none and make it moveble with custom "x" button to HIDE
       and not to close the window.
-- [ ] correctly load saved MainWindow pos
+- [x] correctly load saved MainWindow pos
 
 
 ## to-do... ##
