@@ -7,6 +7,7 @@
 ## to-do... ##
 - [ ] SettingsWindow
   - [x] be able to change ping hostname
-  - [ ] be able to pause and resume pinging
+  - [x] be able to pause and resume pinging
+  - [ ] be able to change interval for ping
   - [ ] be able to change opacity of the MainWindow background
   - [ ] design it lil
