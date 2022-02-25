@@ -66,7 +66,7 @@ namespace Conneciton_status_WPF_
             // window pos x
             Properties.Settings.Default.WindowPosX = SliderPosX.Value;
             // window pos y
-            Properties.Settings.Default.WindowPosY = SliderPosX.Value;
+            Properties.Settings.Default.WindowPosY = SliderPosY.Value;
 
             Properties.Settings.Default.Save();
         }
