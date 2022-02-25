@@ -48,7 +48,8 @@ namespace Conneciton_status_WPF_
             UnhookWindowsHookEx(hhook);
         }
 
-        static bool ModifierPressed = false;
+        static bool LModifierPressed = false;
+        static bool RModifierPressed = false;
         public static bool Pressed = false;
         public static bool Pressed2 = false;
 
@@ -60,11 +61,19 @@ namespace Conneciton_status_WPF_
 
                 if (vkCode == 160 || vkCode == 161) // left and right Shift
                 {
-                    ModifierPressed = true;
+                    if(vkCode == 160)
+                    {
+                        LModifierPressed = true;
+                    }
+                    else if(vkCode == 161)
+                    {
+                        RModifierPressed = true;
+                    }
+
                 }
-                else if (ModifierPressed == true && vkCode == 119) // RShift + F8
+                else if (RModifierPressed == true && vkCode == 119) // RShift + F8
                 {
-                    ModifierPressed = false;
+                    RModifierPressed = false;
                     if (!Pressed2)
                     {
                         Pressed2 = true;
@@ -75,6 +84,11 @@ namespace Conneciton_status_WPF_
                         Pressed2 = false;
                         settingswindow.Hide();
                     }
+                }
+                else if (LModifierPressed == true && vkCode == 119) // LShift + F8
+                {
+                    LModifierPressed = false;
+                    App.Current.Shutdown();
                 }
                 else if (vkCode == 119) // F8
                 {
@@ -91,7 +105,8 @@ namespace Conneciton_status_WPF_
                 }
                 else
                 {
-                    ModifierPressed = false;
+                    RModifierPressed = false;
+                    LModifierPressed = false;
                 }
 
                 // return (IntPtr)1; // note: this will interfere with keyboard processing for other apps
