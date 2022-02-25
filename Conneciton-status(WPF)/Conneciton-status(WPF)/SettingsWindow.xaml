@@ -18,15 +18,20 @@
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Height="25" Width="75" Margin="162,122,10,10" Name="ButtonClose" Click="ButtonClose_Click">Close</Button>
-        <Button Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Height="25" Width="75" Margin="82,122,90,10" Name="ButtonSave" Click="ButtonSave_Click">Save</Button>
-        <Button Content="Resume" Grid.Column="0" Height="25" Width="75" HorizontalAlignment="Right" Margin="0,122,10,10" Name="ButtonResumePing" Click="ButtonResumePing_Click"/>
-        <Button Content="Pause" Grid.Column="0" Height="25" Width="75" HorizontalAlignment="Right" Margin="0,122,107,10" Name="ButtonPausePing" Click="ButtonPausePing_Click"/>
+        <Button Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Height="25" Width="75" Margin="162,122,10,10" x:Name="ButtonClose1" Click="ButtonClose_Click" Content="Close"/>
+        <Button Grid.Row="2" Grid.ColumnSpan="1" Grid.Column="1" Height="25" Width="75" Margin="82,122,90,10" x:Name="ButtonSave1" Click="ButtonSave_Click" Content="Save"/>
+        <Button Content="Resume" Grid.Column="0" Height="25" Width="75" HorizontalAlignment="Right" Margin="0,122,10,10" x:Name="ButtonResumePing1" Click="ButtonResumePing_Click"/>
+        <Button Content="Pause" Grid.Column="0" Height="25" Width="75" HorizontalAlignment="Right" Margin="0,122,107,10" x:Name="ButtonPausePing1" Click="ButtonPausePing_Click"/>
         <TextBox Height="23" Margin="10,41,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" x:Name="TextBoxPingHost"/>
-        <TextBox Height="23" Margin="10,69,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Name="TextBoxInterval"/>
+        <TextBox Height="23" Margin="10,69,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" x:Name="TextBoxInterval"/>
         <Label Content="Ping" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462"/>
         <Label Content="Window" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Column="1"/>
-        <Slider Grid.Column="1" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="227" Maximum="100" ValueChanged="SliderWindowOpacity_Changed" Name="SliderWindowOpacity"/>
+        <Slider Grid.Column="1" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" Width="227" Maximum="100" ValueChanged="SliderWindowOpacity_Changed" x:Name="SliderWindowOpacity" Value="100"/>
+        <Label Content="Postion" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Row="1"/>
+        <Label Content="X" HorizontalAlignment="Left" Margin="10,36,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Row="1"/>
+        <Label Content="Y" HorizontalAlignment="Left" Margin="10,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Row="1"/>
+        <Slider HorizontalAlignment="Left" Margin="32,41,0,0" Grid.Row="1" VerticalAlignment="Top" Width="205" Name="SliderPosX" ValueChanged="SliderPosX_ValueChanged"/>
+        <Slider HorizontalAlignment="Left" Margin="32,70,0,0" Grid.Row="1" VerticalAlignment="Top" Width="205" Name="SliderPosY" ValueChanged="SliderPosY_ValueChanged"/>
 
 
     </Grid>

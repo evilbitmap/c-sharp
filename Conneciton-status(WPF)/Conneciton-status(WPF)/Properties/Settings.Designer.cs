@@ -49,13 +49,37 @@ namespace Conneciton_status_WPF_.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.5")]
-        public decimal WindowOpacity {
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double WindowOpacity {
             get {
-                return ((decimal)(this["WindowOpacity"]));
+                return ((double)(this["WindowOpacity"]));
             }
             set {
                 this["WindowOpacity"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double WindowPosX {
+            get {
+                return ((double)(this["WindowPosX"]));
+            }
+            set {
+                this["WindowPosX"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public double WindowPosY {
+            get {
+                return ((double)(this["WindowPosY"]));
+            }
+            set {
+                this["WindowPosY"] = value;
             }
         }
     }

@@ -29,17 +29,17 @@ namespace Conneciton_status_WPF_
         System.Timers.Timer timerPing = new System.Timers.Timer(Properties.Settings.Default.PingInterval);
         void StatusWindow_Loaded(object sender, RoutedEventArgs e)
         {
-            TimerClass timers = new TimerClass();
             KeyboardHook hook = new KeyboardHook();
             GetPing ping = new GetPing();
             this.Topmost = true;
-            var desktopWorkingArea = System.Windows.SystemParameters.WorkArea;
-            this.Left = desktopWorkingArea.Right - this.Width - 10;
-            this.Top = desktopWorkingArea.Bottom - this.Height - 10;
-            this.Background.Opacity = 0.5;
 
-
+            //opacity
+            ChangeWindowOpacity.Change(Properties.Settings.Default.WindowOpacity);
+            //pos
+            ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY);
+            //hook
             hook.SetHook();
+            //timers
             SetTimerPing();
             SetTimerIsConnected();
             ping.SetWorkerPing();
