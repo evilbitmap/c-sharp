@@ -24,7 +24,6 @@ namespace Conneciton_status_WPF_
         public MainWindow()
         {
             InitializeComponent();
-
         }
         System.Timers.Timer timerPing = new System.Timers.Timer(Properties.Settings.Default.PingInterval);
         void StatusWindow_Loaded(object sender, RoutedEventArgs e)
