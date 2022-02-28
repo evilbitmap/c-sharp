@@ -11,7 +11,7 @@
   - [x] Be able to change ping hostname
   - [x] Be able to pause and resume pinging
   - [x] Be able to change interval for ping
-      - [ ] Change it instantly
+      - [ ] Change it instantly. Solution: No idea lol
   - [x] Be able to change opacity of the MainWindow background
   - [x] Be able to change the postion of the window
   - [ ] Add checkbox for alignment to taskbar
