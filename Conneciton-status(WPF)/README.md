@@ -14,7 +14,8 @@
       - [ ] Change it instantly. Solution: No idea lol
   - [x] Be able to change opacity of the MainWindow background
   - [x] Be able to change the postion of the window
-  - [ ] Add checkbox for alignment to taskbar
+  - [x] Add checkbox for alignment to taskbar
+      - [ ] Add function
   - [ ] Design it lil
 - [x] Left SHIFT + F8 = close program
 
