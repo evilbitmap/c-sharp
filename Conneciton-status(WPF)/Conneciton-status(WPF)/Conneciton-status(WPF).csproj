@@ -58,6 +58,7 @@
     </ApplicationDefinition>
     <Compile Include="ChangeWindowOpacity.cs" />
     <Compile Include="ChangeWindowPos.cs" />
+    <Compile Include="GetMousePos.cs" />
     <Compile Include="IsConnected.cs" />
     <Compile Include="KeyboardHook.cs" />
     <Compile Include="SettingsWindow.xaml.cs">

@@ -88,19 +88,9 @@ namespace Conneciton_status_WPF_
             KeyboardHook.Pressed2 = false;
         }
 
-        private void Border_MouseDown(object sender, MouseButtonEventArgs e)
+        private void Border_MouseDown(object sender, MouseEventArgs e)
         {
-
-        }
-
-        private void Border_MouseUp(object sender, MouseButtonEventArgs e)
-        {
-
-        }
-
-        private void Border_MouseMove(object sender, MouseEventArgs e)
-        {
-
+            DragMove();
         }
     }
 }

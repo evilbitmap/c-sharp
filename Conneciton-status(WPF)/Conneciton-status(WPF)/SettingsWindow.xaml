@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Conneciton_status_WPF_"
         mc:Ignorable="d"
-        Title="Settings" Height="500" Width="500"
+        Title="Settings" Height="400
+        " Width="500"
         Loaded="SettingsWindow_Loaded"
         ResizeMode="NoResize"
         WindowStyle="None">
@@ -25,27 +26,47 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button Grid.Row="12" Grid.ColumnSpan="1" Grid.Column="1" Height="25" Width="75" Margin="165,4,10,10" x:Name="ButtonClose1" Click="ButtonClose_Click" Content="Close"/>
-        <Button Grid.Row="12" Grid.ColumnSpan="1" Grid.Column="1" Height="25" Width="75" Margin="71,4,104,10" x:Name="ButtonSave1" Click="ButtonSave_Click" Content="Save"/>
-        <Button Content="Resume" Height="25" Width="75" HorizontalAlignment="Right" Margin="0,7,10,7" x:Name="ButtonResumePing1" Click="ButtonResumePing_Click" Grid.Row="4"/>
-        <Button Content="Pause" Height="25" Width="75" HorizontalAlignment="Right" Margin="0,7,90,7" x:Name="ButtonPausePing1" Click="ButtonPausePing_Click" Grid.Row="4"/>
-        <TextBox Height="23" Margin="10,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" x:Name="TextBoxPingHost" Grid.Row="2"/>
-        <TextBox Height="23" Margin="10,10,10,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" x:Name="TextBoxInterval" Grid.Row="3"/>
-        <Label Content="Ping" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Row="1"/>
-        <Label Content="Window" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Column="1" Grid.Row="1"/>
-        <Slider Grid.Column="1" HorizontalAlignment="Left" Margin="10,11,0,0" VerticalAlignment="Top" Width="227" Maximum="100" ValueChanged="SliderWindowOpacity_Changed" x:Name="SliderWindowOpacity" Value="100" Grid.Row="2"/>
-        <Label Content="Postion" HorizontalAlignment="Left" Margin="10,6,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Row="5"/>
-        <Label Content="X" HorizontalAlignment="Left" Margin="8,6,0,6" RenderTransformOrigin="-0.211,0.462" Grid.Row="6"/>
-        <Label Content="Y" HorizontalAlignment="Left" Margin="8,6,0,6" RenderTransformOrigin="-0.211,0.462" Grid.Row="7"/>
-        <Slider HorizontalAlignment="Left" Margin="30,10,0,0" Grid.Row="6" VerticalAlignment="Top" Width="206" Name="SliderPosX" ValueChanged="SliderPosX_ValueChanged"/>
-        <Slider HorizontalAlignment="Left" Margin="30,10,0,0" Grid.Row="7" VerticalAlignment="Top" Width="206" Name="SliderPosY" ValueChanged="SliderPosY_ValueChanged"/>
-        <Button Content="X" Grid.Column="1" HorizontalAlignment="Left" Margin="210,0,0,0" VerticalAlignment="Top" Width="40" Click="ButtonX_Click" Height="38"/>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="38" VerticalAlignment="Top" Width="460" Grid.ColumnSpan="2" MouseDown="Border_MouseDown" MouseUp="Border_MouseUp" MouseMove="Border_MouseMove"/>
+        <Button Grid.Row="14" Grid.ColumnSpan="1" Grid.Column="1" Height="22" Width="75" Margin="165,2,10,2" x:Name="ButtonClose1" Click="ButtonClose_Click" Content="Close"/>
+        <Button Grid.Row="14" Grid.ColumnSpan="1" Grid.Column="1" Height="22" Width="75" Margin="74,2,101,2" x:Name="ButtonSave1" Click="ButtonSave_Click" Content="Save"/>
+        <Button Content="Resume" Height="22" Width="75" HorizontalAlignment="Right" Margin="0,1,10,1" x:Name="ButtonResumePing1" Click="ButtonResumePing_Click" Grid.Row="4"/>
+        <Button Content="Pause" Height="22" Width="75" HorizontalAlignment="Right" Margin="0,1,90,1" x:Name="ButtonPausePing1" Click="ButtonPausePing_Click" Grid.Row="4"/>
+        <TextBox Margin="10,2" TextWrapping="Wrap" Text="" x:Name="TextBoxPingHost" Grid.Row="2"/>
+        <TextBox Margin="10,2" TextWrapping="Wrap" Text="" x:Name="TextBoxInterval" Grid.Row="3"/>
+        <Label Content="Ping" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Row="1" Height="27" Width="34"/>
+        <Label Content="Window" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Row="8"/>
+        <Slider HorizontalAlignment="Left" Margin="10,4,0,4" Width="227" Maximum="100" ValueChanged="SliderWindowOpacity_Changed" x:Name="SliderWindowOpacity" Value="100" Grid.Row="9"/>
+        <Label Content="Postion" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Row="5" Height="27" Width="50"/>
+        <Label Content="X" HorizontalAlignment="Left" Margin="10,1,0,1" RenderTransformOrigin="-0.211,0.462" Grid.Row="6"/>
+        <Label Content="Y" HorizontalAlignment="Left" Margin="10,0,0,0" RenderTransformOrigin="-0.211,0.462" Grid.Row="7" Height="27" VerticalAlignment="Top"/>
+        <Slider HorizontalAlignment="Left" Margin="32,5,0,4" Grid.Row="6" Width="206" Name="SliderPosX" ValueChanged="SliderPosX_ValueChanged"/>
+        <Slider HorizontalAlignment="Left" Margin="32,6,0,4" Grid.Row="7" Width="206" Name="SliderPosY" ValueChanged="SliderPosY_ValueChanged" RenderTransformOrigin="0,2" OverridesDefaultStyle="True">
+            <Slider.Effect>
+                <BlurEffect Radius="0"/>
+            </Slider.Effect>
+        </Slider>
+        <Button Content="X" Grid.Column="1" HorizontalAlignment="Left" Margin="209,0,0,0" VerticalAlignment="Top" Width="41" Click="ButtonX_Click" Height="27">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF9E9E9E" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <Border BorderBrush="White" BorderThickness="1" HorizontalAlignment="Left" Height="27" VerticalAlignment="Top" Width="460" Grid.ColumnSpan="2" MouseDown="Border_MouseDown">
+            <Border.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB2B2B2" Offset="0"/>
+                    <GradientStop Color="White" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
 
 
     </Grid>
