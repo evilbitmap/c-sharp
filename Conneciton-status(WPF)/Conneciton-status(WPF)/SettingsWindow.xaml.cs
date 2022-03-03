@@ -29,6 +29,7 @@ namespace Conneciton_status_WPF_
         // LOAD
         private void SettingsWindow_Loaded(object sender, EventArgs e)
         {
+            ChangeWindowPos.ChangePos(Properties.);
             // ping
             TextBoxPingHost.Text = Properties.Settings.Default.PingHost;
             TextBoxInterval.Text = Convert.ToString(Properties.Settings.Default.PingInterval);
@@ -45,39 +46,34 @@ namespace Conneciton_status_WPF_
             if(Properties.Settings.Default.AllignToTaskBar)
             {
                 CheckBoxAllignToTaskBar.IsChecked = true;
+                SliderPosY.Minimum = System.Windows.SystemParameters.PrimaryScreenHeight - System.Windows.SystemParameters.WorkArea.Height;
             }
             else
             {
                 CheckBoxAllignToTaskBar.IsChecked = false;
+                SliderPosY.Minimum = 0;
             }
         }
         private void SliderPosX_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            ChangeWindowPos.ChangePos(SliderPosX.Value, SliderPosY.Value);
+            Properties.Settings.Default.WindowPosX = SliderPosX.Value;
+            ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY);
         }
 
         private void SliderPosY_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            ChangeWindowPos.ChangePos(SliderPosX.Value, SliderPosY.Value);
+            Properties.Settings.Default.WindowPosY = SliderPosY.Value;
+            ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY);
         }
 
         private void SliderWindowOpacity_Changed(object sender, RoutedEventArgs e)
         {
+            Properties.Settings.Default.WindowOpacity = SliderWindowOpacity.Value;
             ChangeWindowOpacity.Change(SliderWindowOpacity.Value);
         }
 
         private void ButtonSave_Click(object sender, RoutedEventArgs e)
         {
-            // ping host
-            Properties.Settings.Default.PingHost = TextBoxPingHost.Text;
-            // ping interval
-            Properties.Settings.Default.PingInterval = Convert.ToInt32(TextBoxInterval.Text);
-            // window opacity
-            Properties.Settings.Default.WindowOpacity = SliderWindowOpacity.Value;
-            // window pos x
-            Properties.Settings.Default.WindowPosX = SliderPosX.Value;
-            // window pos y
-            Properties.Settings.Default.WindowPosY = SliderPosY.Value;
             // checkbox allign
             if((bool)CheckBoxAllignToTaskBar.IsChecked)
             {
@@ -114,12 +110,35 @@ namespace Conneciton_status_WPF_
 
         private void CheckBoxAllignToTaskBar_Checked(object sender, RoutedEventArgs e)
         {
-            SliderPosY.Maximum = System.Windows.SystemParameters.WorkArea.Height - App.Current.MainWindow.Height;
+            SliderPosY.Minimum = System.Windows.SystemParameters.PrimaryScreenHeight - System.Windows.SystemParameters.WorkArea.Height;
         }
 
         private void CheckBoxAllignToTaskBar_Unchecked(object sender, RoutedEventArgs e)
         {
-            SliderPosY.Maximum = System.Windows.SystemParameters.PrimaryScreenHeight;
+            SliderPosY.Minimum = 0;
+        }
+
+        private void TextBoxPingHost_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                Properties.Settings.Default.PingHost = TextBoxPingHost.Text;
+            }
+            catch
+            {
+            }
+            
+        }
+
+        private void TextBoxInterval_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            try
+            {
+                Properties.Settings.Default.PingInterval = Convert.ToInt32(TextBoxInterval.Text);
+            }
+            catch
+            {
+            }
         }
     }
 }

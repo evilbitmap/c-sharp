@@ -37,8 +37,8 @@
         <Button Grid.Row="14" Grid.ColumnSpan="1" Grid.Column="1" Height="22" Width="75" Margin="74,2,101,2" x:Name="ButtonSave1" Click="ButtonSave_Click" Content="Save"/>
         <Button Content="Resume" Height="22" Width="75" HorizontalAlignment="Right" Margin="0,1,10,1" x:Name="ButtonResumePing1" Click="ButtonResumePing_Click" Grid.Row="4"/>
         <Button Content="Pause" Height="22" Width="75" HorizontalAlignment="Right" Margin="0,1,90,1" x:Name="ButtonPausePing1" Click="ButtonPausePing_Click" Grid.Row="4"/>
-        <TextBox Margin="10,2" TextWrapping="Wrap" Text="" x:Name="TextBoxPingHost" Grid.Row="2"/>
-        <TextBox Margin="10,2" TextWrapping="Wrap" Text="" x:Name="TextBoxInterval" Grid.Row="3"/>
+        <TextBox Margin="10,2" TextWrapping="Wrap" Text="" x:Name="TextBoxPingHost" TextChanged="TextBoxPingHost_TextChanged" Grid.Row="2"/>
+        <TextBox Margin="10,2" TextWrapping="Wrap" Text="" x:Name="TextBoxInterval" TextChanged="TextBoxInterval_TextChanged" Grid.Row="3"/>
         <Label Content="Ping" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Row="1" Height="27" Width="34"/>
         <Label Content="Window" HorizontalAlignment="Left" Margin="10,1,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.211,0.462" Grid.Row="8"/>
         <Slider HorizontalAlignment="Left" Margin="10,4,0,4" Width="227" Maximum="100" ValueChanged="SliderWindowOpacity_Changed" x:Name="SliderWindowOpacity" Value="100" Grid.Row="9"/>

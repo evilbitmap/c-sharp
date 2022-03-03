@@ -27,14 +27,21 @@ namespace Conneciton_status_WPF_
             {
                 try
                 {
-                    PingReply reply = ping.Send(Properties.Settings.Default.PingHost, 1000);
-                    if (reply != null)
+                    if(Properties.Settings.Default.PingHost == null)
                     {
-                        PingLatency = Convert.ToInt32(reply.RoundtripTime);
+
                     }
                     else
                     {
-                        PingLatency = Convert.ToInt32(reply.RoundtripTime);
+                        PingReply reply = ping.Send(Properties.Settings.Default.PingHost, 1000);
+                        if (reply != null)
+                        {
+                            PingLatency = Convert.ToInt32(reply.RoundtripTime);
+                        }
+                        else
+                        {
+                            PingLatency = Convert.ToInt32(reply.RoundtripTime);
+                        }
                     }
                 }
                 catch (Exception)
