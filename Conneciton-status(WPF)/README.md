@@ -15,7 +15,8 @@
   - [x] Be able to change opacity of the MainWindow background
   - [x] Be able to change the postion of the window
   - [x] Add checkbox for alignment to taskbar
-      - [ ] Add function
+      - [x] Add function
+            - [ ] Update in real-time
   - [ ] Design it lil
 - [x] Left SHIFT + F8 = close program
 
