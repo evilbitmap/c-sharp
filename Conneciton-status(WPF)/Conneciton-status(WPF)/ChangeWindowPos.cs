@@ -10,6 +10,9 @@ namespace Conneciton_status_WPF_
 {
     class ChangeWindowPos
     {
+        public static double WindowPosX { get; set; }
+        public static double WindowPosY { get; set; }
+
         public static void ChangePos(double x, double y)
         {
             if(Properties.Settings.Default.AllignToTaskBar)

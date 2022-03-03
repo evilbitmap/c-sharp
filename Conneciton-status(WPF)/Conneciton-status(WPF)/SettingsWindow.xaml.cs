@@ -23,19 +23,17 @@ namespace Conneciton_status_WPF_
         {
             InitializeComponent();
         }
-        static double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
-        static double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
-        static double taskbarHeight = System.Windows.SystemParameters.CaptionHeight;
         // LOAD
         private void SettingsWindow_Loaded(object sender, EventArgs e)
         {
-            ChangeWindowPos.ChangePos(Properties.);
+            double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
+            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
+
             // ping
             TextBoxPingHost.Text = Properties.Settings.Default.PingHost;
             TextBoxInterval.Text = Convert.ToString(Properties.Settings.Default.PingInterval);
             // window
             SliderWindowOpacity.Value = Properties.Settings.Default.WindowOpacity;
-
             // slider pos x,y
             SliderPosX.Maximum = screenWidth - App.Current.MainWindow.Width;
             SliderPosY.Maximum = screenHeight - App.Current.MainWindow.Height;
@@ -56,34 +54,19 @@ namespace Conneciton_status_WPF_
         }
         private void SliderPosX_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            Properties.Settings.Default.WindowPosX = SliderPosX.Value;
-            ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY);
+            ChangeWindowPos.WindowPosX = SliderPosX.Value;
+            ChangeWindowPos.ChangePos(ChangeWindowPos.WindowPosX, ChangeWindowPos.WindowPosY);
         }
 
         private void SliderPosY_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            Properties.Settings.Default.WindowPosY = SliderPosY.Value;
-            ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY);
+            ChangeWindowPos.WindowPosY = SliderPosY.Value;
+            ChangeWindowPos.ChangePos(ChangeWindowPos.WindowPosX, ChangeWindowPos.WindowPosY);
         }
 
         private void SliderWindowOpacity_Changed(object sender, RoutedEventArgs e)
         {
-            Properties.Settings.Default.WindowOpacity = SliderWindowOpacity.Value;
             ChangeWindowOpacity.Change(SliderWindowOpacity.Value);
-        }
-
-        private void ButtonSave_Click(object sender, RoutedEventArgs e)
-        {
-            // checkbox allign
-            if((bool)CheckBoxAllignToTaskBar.IsChecked)
-            {
-                Properties.Settings.Default.AllignToTaskBar = true;
-            }
-            else
-            {
-                Properties.Settings.Default.AllignToTaskBar = false;
-            }
-            Properties.Settings.Default.Save();
         }
         private void ButtonClose_Click(object sender, EventArgs e)
         {
@@ -107,10 +90,11 @@ namespace Conneciton_status_WPF_
         {
             DragMove();
         }
-
+        static double taskbarHeight = System.Windows.SystemParameters.PrimaryScreenHeight - System.Windows.SystemParameters.WorkArea.Height;
         private void CheckBoxAllignToTaskBar_Checked(object sender, RoutedEventArgs e)
         {
-            SliderPosY.Minimum = System.Windows.SystemParameters.PrimaryScreenHeight - System.Windows.SystemParameters.WorkArea.Height;
+
+            SliderPosY.Minimum = taskbarHeight;
         }
 
         private void CheckBoxAllignToTaskBar_Unchecked(object sender, RoutedEventArgs e)
@@ -139,6 +123,24 @@ namespace Conneciton_status_WPF_
             catch
             {
             }
+        }
+        private void ButtonSave_Click(object sender, RoutedEventArgs e)
+        {
+            // window opacity
+            Properties.Settings.Default.WindowOpacity = SliderWindowOpacity.Value;
+            // window pos
+            Properties.Settings.Default.WindowPosX = SliderPosX.Value;
+            Properties.Settings.Default.WindowPosY = SliderPosY.Value;
+            // checkbox allign
+            if ((bool)CheckBoxAllignToTaskBar.IsChecked)
+            {
+                Properties.Settings.Default.AllignToTaskBar = true;
+            }
+            else
+            {
+                Properties.Settings.Default.AllignToTaskBar = false;
+            }
+            Properties.Settings.Default.Save();
         }
     }
 }

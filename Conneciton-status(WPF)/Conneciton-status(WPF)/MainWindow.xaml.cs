@@ -31,11 +31,11 @@ namespace Conneciton_status_WPF_
             KeyboardHook hook = new KeyboardHook();
             GetPing ping = new GetPing();
             this.Topmost = true;
+            //window pos
+            ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY);
 
             //opacity
             ChangeWindowOpacity.Change(Properties.Settings.Default.WindowOpacity);
-            //win pos
-            ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY);
             //hook
             hook.SetHook();
             //timers
