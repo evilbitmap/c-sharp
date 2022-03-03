@@ -46,7 +46,7 @@
         <Label Content="X" HorizontalAlignment="Left" Margin="10,1,0,1" RenderTransformOrigin="-0.211,0.462" Grid.Row="6"/>
         <Label Content="Y" HorizontalAlignment="Left" Margin="10,0,0,0" RenderTransformOrigin="-0.211,0.462" Grid.Row="7" Height="27" VerticalAlignment="Top"/>
         <Slider HorizontalAlignment="Left" Margin="32,5,0,4" Grid.Row="6" Width="206" Name="SliderPosX" ValueChanged="SliderPosX_ValueChanged"/>
-        <Slider HorizontalAlignment="Left" Margin="32,6,0,4" Grid.Row="7" Width="206" Name="SliderPosY" ValueChanged="SliderPosY_ValueChanged" RenderTransformOrigin="0,2" OverridesDefaultStyle="True">
+        <Slider HorizontalAlignment="Left" Margin="32,5,0,4" Grid.Row="7" Width="206" Name="SliderPosY" ValueChanged="SliderPosY_ValueChanged">
             <Slider.Effect>
                 <BlurEffect Radius="0"/>
             </Slider.Effect>
@@ -67,6 +67,7 @@
                 </LinearGradientBrush>
             </Border.Background>
         </Border>
+        <CheckBox Content="Allign to taskbar" HorizontalAlignment="Left" Margin="10,6,0,6" Grid.Row="10" Checked="CheckBoxAllignToTaskBar_Checked" Unchecked="CheckBoxAllignToTaskBar_Unchecked" Name="CheckBoxAllignToTaskBar"/>
 
 
     </Grid>

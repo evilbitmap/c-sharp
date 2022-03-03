@@ -34,7 +34,7 @@ namespace Conneciton_status_WPF_
 
             //opacity
             ChangeWindowOpacity.Change(Properties.Settings.Default.WindowOpacity);
-            //pos
+            //win pos
             ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY);
             //hook
             hook.SetHook();
