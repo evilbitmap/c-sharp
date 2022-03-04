@@ -4,7 +4,7 @@
       - Solution: change borderstyle to none and make it moveble with custom "x" button to HIDE
       and not to close the window.
 - [x] correctly load saved MainWindow pos
-- [ ] Window alligns to taskbar when checkbox is unchecked and adds space when is checked
+- [x] Window alligns to taskbar when checkbox is unchecked and adds space when is checked
 
 
 # to-do...
