@@ -12,20 +12,20 @@ namespace Conneciton_status_WPF_
     {
         public static double WindowPosX { get; set; }
         public static double WindowPosY { get; set; }
+        public static bool Dragable { get; set; }
 
         public static void ChangePos(double x, double y)
         {
-            if(Properties.Settings.Default.AllignToTaskBar)
+            double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
+            double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
+            double taskbarHeight = System.Windows.SystemParameters.PrimaryScreenHeight - System.Windows.SystemParameters.WorkArea.Height;
+            if (Properties.Settings.Default.AllignToTaskBar)
             {
-                double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
-                var workingScreenAreaY = System.Windows.SystemParameters.WorkArea.Height;
-                App.Current.MainWindow.Top = workingScreenAreaY - App.Current.MainWindow.Height - y;
+                App.Current.MainWindow.Top = screenHeight - taskbarHeight - App.Current.MainWindow.Height - y;
                 App.Current.MainWindow.Left = screenWidth - App.Current.MainWindow.Width - x;
             }
             else
             {
-                double screenWidth = System.Windows.SystemParameters.PrimaryScreenWidth;
-                double screenHeight = System.Windows.SystemParameters.PrimaryScreenHeight;
                 App.Current.MainWindow.Top = screenHeight - App.Current.MainWindow.Height - y;
                 App.Current.MainWindow.Left = screenWidth - App.Current.MainWindow.Width - x;
             }

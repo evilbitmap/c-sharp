@@ -22,6 +22,7 @@ namespace Conneciton_status_WPF_
         public SettingsWindow()
         {
             InitializeComponent();
+            
         }
         // LOAD
         private void SettingsWindow_Loaded(object sender, EventArgs e)
@@ -39,18 +40,24 @@ namespace Conneciton_status_WPF_
             SliderPosY.Maximum = screenHeight - App.Current.MainWindow.Height;
             SliderPosX.Value = Properties.Settings.Default.WindowPosX;
             SliderPosY.Value = Properties.Settings.Default.WindowPosY;
-
-            // Checkbox alling
+            //allign box
             if(Properties.Settings.Default.AllignToTaskBar)
             {
                 CheckBoxAllignToTaskBar.IsChecked = true;
-                SliderPosY.Minimum = System.Windows.SystemParameters.PrimaryScreenHeight - System.Windows.SystemParameters.WorkArea.Height;
             }
             else
             {
                 CheckBoxAllignToTaskBar.IsChecked = false;
-                SliderPosY.Minimum = 0;
             }
+        }
+        static double taskbarHeight = System.Windows.SystemParameters.PrimaryScreenHeight - System.Windows.SystemParameters.WorkArea.Height;
+        private void CheckBoxAllignToTaskBar_Checked(object sender, RoutedEventArgs e)
+        {
+            SliderPosY.Minimum = taskbarHeight;
+        }
+        private void CheckBoxAllignToTaskBar_Unchecked(object sender, RoutedEventArgs e)
+        {
+            SliderPosY.Minimum = 0;
         }
         private void SliderPosX_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
@@ -60,7 +67,14 @@ namespace Conneciton_status_WPF_
 
         private void SliderPosY_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            ChangeWindowPos.WindowPosY = SliderPosY.Value;
+            if (Properties.Settings.Default.AllignToTaskBar)
+            {
+                ChangeWindowPos.WindowPosY = SliderPosY.Value - taskbarHeight;
+            }
+            else
+            {
+                ChangeWindowPos.WindowPosY = SliderPosY.Value;
+            }
             ChangeWindowPos.ChangePos(ChangeWindowPos.WindowPosX, ChangeWindowPos.WindowPosY);
         }
 
@@ -90,18 +104,6 @@ namespace Conneciton_status_WPF_
         {
             DragMove();
         }
-        static double taskbarHeight = System.Windows.SystemParameters.PrimaryScreenHeight - System.Windows.SystemParameters.WorkArea.Height;
-        private void CheckBoxAllignToTaskBar_Checked(object sender, RoutedEventArgs e)
-        {
-
-            SliderPosY.Minimum = taskbarHeight;
-        }
-
-        private void CheckBoxAllignToTaskBar_Unchecked(object sender, RoutedEventArgs e)
-        {
-            SliderPosY.Minimum = 0;
-        }
-
         private void TextBoxPingHost_TextChanged(object sender, TextChangedEventArgs e)
         {
             try
@@ -111,7 +113,6 @@ namespace Conneciton_status_WPF_
             catch
             {
             }
-            
         }
 
         private void TextBoxInterval_TextChanged(object sender, TextChangedEventArgs e)
@@ -141,6 +142,14 @@ namespace Conneciton_status_WPF_
                 Properties.Settings.Default.AllignToTaskBar = false;
             }
             Properties.Settings.Default.Save();
+        }
+        private void CheckBoxDragable_Checked(object sender, RoutedEventArgs e)
+        {
+            ChangeWindowPos.Dragable = true;
+        }
+        private void CheckBoxDragable_Unchecked(object sender, RoutedEventArgs e)
+        {
+            ChangeWindowPos.Dragable = false;
         }
     }
 }

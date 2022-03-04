@@ -10,7 +10,8 @@
         AllowsTransparency="True"
         WindowStyle="None"
         Loaded="StatusWindow_Loaded"
-        Name="StatusWindow">
+        Name="StatusWindow"
+        MouseDown="StatusWindow_MouseDown">
 
     <Window.Background>
         <SolidColorBrush  Color="Black"/>

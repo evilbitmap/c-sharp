@@ -68,6 +68,7 @@
             </Border.Background>
         </Border>
         <CheckBox Content="Allign to taskbar" HorizontalAlignment="Left" Margin="10,6,0,6" Grid.Row="10" Checked="CheckBoxAllignToTaskBar_Checked" Unchecked="CheckBoxAllignToTaskBar_Unchecked" Name="CheckBoxAllignToTaskBar"/>
+        <CheckBox Content="Dragable" HorizontalAlignment="Left" Margin="10,6,0,5" Grid.Row="11" Checked="CheckBoxDragable_Checked" Unchecked="CheckBoxDragable_Unchecked"/>
 
 
     </Grid>

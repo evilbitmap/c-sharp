@@ -28,11 +28,20 @@ namespace Conneciton_status_WPF_
         System.Timers.Timer timerPing = new System.Timers.Timer(Properties.Settings.Default.PingInterval);
         void StatusWindow_Loaded(object sender, RoutedEventArgs e)
         {
+            double taskbarHeight = System.Windows.SystemParameters.PrimaryScreenHeight - System.Windows.SystemParameters.WorkArea.Height;
             KeyboardHook hook = new KeyboardHook();
             GetPing ping = new GetPing();
             this.Topmost = true;
             //window pos
-            ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY);
+            if (Properties.Settings.Default.AllignToTaskBar)
+            {
+                ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY - taskbarHeight);
+            }
+            else
+            {
+                ChangeWindowPos.ChangePos(Properties.Settings.Default.WindowPosX, Properties.Settings.Default.WindowPosY);
+            }
+            MessageBox.Show(Properties.Settings.Default.WindowPosX.ToString() + " ; " + Properties.Settings.Default.WindowPosY.ToString());
 
             //opacity
             ChangeWindowOpacity.Change(Properties.Settings.Default.WindowOpacity);
@@ -107,5 +116,12 @@ namespace Conneciton_status_WPF_
             }
         }
         // END
+        private void StatusWindow_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if(ChangeWindowPos.Dragable)
+            {
+                DragMove();
+            }
+        }
     }
 }
