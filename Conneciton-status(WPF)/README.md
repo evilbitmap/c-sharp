@@ -17,6 +17,7 @@
   - [x] Be able to change the postion of the window
   - [x] Add checkbox for alignment to taskbar
       - [x] Update window in real-time
+  - [ ] Add dragable option
   - [ ] Design it lil
 - [x] Left SHIFT + F8 = close program
 
