@@ -9,6 +9,6 @@ Veškeré knihovny a jejich verzce jsou uložená v souboru pod jménem ```requi
 ### Argumenty
 Program vyžaduje dva (2) argumenty
 1. Argument
-  Validní URL adresu (např. "...")
+  * Validní URL adresu (např. "...")
 2. Argument
-  Výstupní soubor (např. "vystup.csv")
+  * Výstupní soubor (např. "vystup.csv")
