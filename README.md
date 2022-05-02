@@ -4,10 +4,10 @@ Tenhle program je využíván k extrahování výsledků z parlamentních voleb 
 
 ## Spuštění programu
 ### Instalace knihoven
-Veškeré knihovny a jejich verzce jsou uložená v souboru pod jménem ```requirements.txt```. Pro instalaci knihoven spustě
+Veškeré knihovny a jejich verzce jsou uložená v souboru pod jménem ```requirements.txt```. Pro instalaci knihoven spustě <br />
 ```$ pip install -r requirements.txt```
 ### Argumenty
-Program vyžaduje dva (2) argumenty
+Program vyžaduje dva (2) argumenty <br />
 1. První argument: Validní URL adresu (např. "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=8&xnumnuts=5202")
 2. Druhý argument: Výstupní soubor (např. "vystup.csv")
 ### Ukázka
