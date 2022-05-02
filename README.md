@@ -8,7 +8,8 @@ Veškeré knihovny a jejich verzce jsou uložená v souboru pod jménem ```requi
 ```$ pip install -r requirements.txt```
 ### Argumenty
 Program vyžaduje dva (2) argumenty
-1. První argument
- - Validní URL adresu (např. "...")
-2. Druhý argument
- - Výstupní soubor (např. "vystup.csv")
+1. První argument: Validní URL adresu (např. "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=8&xnumnuts=5202")
+2. Druhý argument: Výstupní soubor (např. "vystup.csv")
+### Ukázka
+```python main.py "https://volby.cz/pls/ps2017nss/ps32?xjazyk=CZ&xkraj=8&xnumnuts=5202" "vystup.csv"```
+
