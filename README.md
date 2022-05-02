@@ -2,7 +2,7 @@
 Tenhle program je využíván k extrahování výsledků z parlamentních voleb ze stránky kterou najdete [ZDE](https://volby.cz/).
 ## Spuštění programu
 ### Instalace knihoven
-Veškeré knihovny a jejich verzce jsou uložená v souboru pod jménem ```requirements.txt```. Pro instalaci knihoven spustě... <br />
+Veškeré knihovny a jejich verze jsou uložené v souboru pod jménem ```requirements.txt```. Pro instalaci knihoven spustě následovný kód na místě kde se nachází ```requirements.txt```... <br />
 ```$ pip install -r requirements.txt```
 ### Argumenty
 Program vyžaduje dva (2) argumenty a musí být ve správném pořadí <br />
